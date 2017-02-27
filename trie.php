@@ -1,4 +1,9 @@
 <?php
+/*
+wangxx created this file on Feb 27,2017
+unix2dos SpecialNum.txt
+unix2dos NumberSeg.txt
+*/
 error_reporting (E_ALL & ~E_NOTICE);
 
 class Trie {
@@ -20,7 +25,7 @@ class Trie {
 			// print_r($trienode);
 			$trienode=& $trienode['children'][$character];
 		}
-		
+		// print_r($this->trie);
 	}
 	
 
@@ -108,20 +113,25 @@ class Trie {
 	}
 }
 	
-	$trie=new Trie( );
-	$trie->setWord('a');
-	$trie->setWord('ab');
-	$trie->setWord('great');
-	$trie->setWord('army');
-	$trie->setWord('abc');
-	$trie->setWord('abcde');
-	$trie->setWord('de');
-	$trie->setWord('d');
-	// $words=$trie->searchMax('abcdefgh');
-	$maxWord=$trie->searchMax('abcdefgh');
-	print_r($maxWord);
+	$trie=new Trie();
+	$trie->setWord('156');
+	$trie->setWord('15618212');
+	$trie->setWord('82397');
+	$trie->setWord('7283482');
+	$trie->setWord('345435');
+	$trie->setWord('5656');
+	$trie->setWord('2343');
+	$trie->setWord('45654');
 	
+	print_r($trie);
+	$maxWord=$trie->searchMax('15618212766');
+	print_r($maxWord);
 	echo 'maxWord is '.$maxWord['word']."\n";
+
+
+
+
+	// $words=$trie->searchMax('abcdefgh');
 	// foreach($words as $word){
 	// 	echo 'position:'.$word['position'].'-'.(strlen($word['word'])+$word['position']."\n");
 	// 	echo 'word---'.$word['word']."\n";
