@@ -150,7 +150,7 @@ if(null==$numberSeg){
 	$file = 'NumberSeg.txt'; 
 	$content = file_get_contents($file); 
 	$arrWord = explode("\r\n", $content); 
-	$trie=new Trie( );
+	$trie=new Trie();
 	foreach ($arrWord as $k => $v) {
 	    $trie->setWord($v);
 	}
